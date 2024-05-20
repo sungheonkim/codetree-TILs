@@ -7,6 +7,6 @@ public class Main {
         int a = sc.nextInt(); // - 기호가 나오기 전까지 입력 진행
         int b = sc.nextInt(); // - 기호가 나오기 전까지 입력 진행
         int c = sc.nextInt(); // - 기호가 나오기 전 or 입력의 마지막 부분까지 진행
-        System.out.printf("%03d-%d-%d",a,c,b);
+        System.out.printf("%03d-%d-%d",a,c,b);// 03으로 010표현
     }
 }
