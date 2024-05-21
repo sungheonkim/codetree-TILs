@@ -18,7 +18,7 @@ public class Main {
         }
         else if(a=='C')
         {
-            System.out.print("Usally");
+            System.out.print("Usaally");
         }
         else if(a=='D')
         {
