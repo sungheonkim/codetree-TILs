@@ -26,11 +26,21 @@ public class Main {
         }
         else
         {
-           if(a>b)
-           {
-            mid=a;
-           } 
-           else mid=b;
+           if(b>a)
+            {
+                if(c>b)
+                {
+                    mid=b;
+                }
+                else
+                {
+                    mid=c;
+                }
+            }
+            else
+            {
+                mid=a;
+            }
         }
         System.out.print(mid);
             
