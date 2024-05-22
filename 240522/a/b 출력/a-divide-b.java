@@ -11,7 +11,8 @@ public class Main {
         {
     
             System.out.print(a/b);
-            if(a<b&&cnt==0)
+            
+            if(cnt==0)
             {
                 System.out.print(".");
                 cnt++;
