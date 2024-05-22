@@ -5,8 +5,21 @@ public class Main {
         Scanner sc=new Scanner(System.in);
         int a=sc.nextInt();
         int b=sc.nextInt();
-        double c=(double)a/(double)b;
-        System.out.printf("%.20f",c);
+        int cnt=0;
+
+        for(int i=0;i<21;i++)
+        {
+    
+            System.out.print(a/b);
+            if(a/b==0&&cnt==0)
+            {
+                System.out.print(".");
+                cnt++;
+            }
+            a=a%b*10;
+            }
+           
+        
     
     }
 }
