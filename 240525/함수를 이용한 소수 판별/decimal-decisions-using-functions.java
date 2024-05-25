@@ -3,6 +3,11 @@ public class Main {
     //소수인지 판별하는 부분
     public static int soso(int n)
     {
+        if(n==1)
+        {
+            return 0;
+        }
+        else{
         for(int j=2;j<n;j++){
     
             if(n%j==0)
@@ -11,6 +16,7 @@ public class Main {
             }
             }
             return 1;
+        }
     }
     // for문으로 소수 더하기    
     public static int index(int a,int b)
