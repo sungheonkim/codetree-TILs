@@ -5,11 +5,9 @@ public class Main {
         int tmp=0;
         if(a%2==0)
         {
-            for(int i=0;i<a;i++)
-            {
-                tmp+=a%i;
+            while(a>0){
+                tmp+=a%10;
                 a=a/10;
-                
             }
             if(tmp%5==0)
             {
