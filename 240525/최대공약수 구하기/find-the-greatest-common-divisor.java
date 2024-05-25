@@ -16,7 +16,7 @@ public class Main {
             }
         }
        }
-       else
+       else if(a<b)
        {
             for(int i=1;i<b;i++)
         {
@@ -25,6 +25,9 @@ public class Main {
                 max=i;
             }
         }
+       }
+       else{
+        max=a;
        }
        System.out.print(max);
     }
