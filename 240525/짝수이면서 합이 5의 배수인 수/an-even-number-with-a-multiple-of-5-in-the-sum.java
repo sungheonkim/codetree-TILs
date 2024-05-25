@@ -3,7 +3,7 @@ public class Main {
     public static int yesno(int a)
     {
         int tmp=0;
-        int cnt=0;
+        
         if(a%2==0)
         {
             while(a>0){
@@ -14,11 +14,14 @@ public class Main {
 
             if(tmp%5==0)
             {
-                cnt++;
+                return 1;
             }
             else return 0;
         }
-        return cnt;
+        else
+        {   
+            return 0;
+        }
      
     }
 
