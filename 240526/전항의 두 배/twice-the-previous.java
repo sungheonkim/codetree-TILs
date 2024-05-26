@@ -5,8 +5,9 @@ public class Main {
         Scanner sc=new Scanner(System.in);
         // int n=sc.nextInt();
         int arr[] = new int[10];
-        arr[0]=2;
-        arr[1]=3;
+        arr[0]=sc.nextInt();
+        arr[1]=sc.nextInt();
+      
 
         for(int i=2;i<10;i++)
         {
