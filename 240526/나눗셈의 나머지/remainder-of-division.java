@@ -9,15 +9,9 @@ public class Main {
         int b=sc.nextInt();
         int sum=0;
 
-        while(a>0)
+        while(a>1)
         {
-            for(int i=0;i<10;i++)
-            {
-                if(a%b==i)
-                {
-                    arr[i]++;
-                }
-            }
+            arr[a%b]++;
             a/=b;
 
         }
