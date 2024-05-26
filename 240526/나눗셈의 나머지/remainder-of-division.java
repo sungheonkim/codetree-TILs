@@ -11,10 +11,19 @@ public class Main {
 
         while(a>0)
         {
-            int tmp=a%b;
-            sum=tmp*tmp;
+            for(int i=0;i<10;i++)
+            {
+                if(a%b==i)
+                {
+                    arr[i]++;
+                }
+            }
             a/=b;
 
+        }
+        for(int i=0;i<10;i++)
+        {
+            sum+=arr[i]*arr[i];
         }
     
         System.out.print(sum);
