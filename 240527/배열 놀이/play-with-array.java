@@ -26,7 +26,7 @@ public class Main {
             {
                 int d=sc.nextInt();
                 int cnt=0;
-                for(int j=0;j<b;j++)
+                for(int j=0;j<a;j++)
                 {
                     if(arr[j]==d)
                     {
