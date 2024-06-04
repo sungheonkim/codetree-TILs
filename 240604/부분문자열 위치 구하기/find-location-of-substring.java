@@ -14,6 +14,7 @@ public class Main {
         {
             index=i;
            System.out.print(index);
+           break;
         }
         }
 
