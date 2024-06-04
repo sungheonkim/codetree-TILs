@@ -8,7 +8,7 @@ public class Main {
         int lengthTmp=tmp.length();
         int index=-1;
  
-        for(int i=0;i<str.length()-1;i++)
+        for(int i=0;i<str.length()-lengthTmp;i++)
         {
         if(str.substring(i,i+lengthTmp).equals(tmp))
         {
