@@ -7,14 +7,20 @@ public class Main {
         String str=sc.next();
         char[] arr=str.toCharArray();
         char tmp=arr[0];
+        char tmp2=arr[1];
         for(int i=0;i<str.length();i++)
         {
             if(arr[i]==tmp)
             {
-                arr[i]=arr[1];
+                arr[i]=tmp2;
+            }
+            else if (arr[i]==tmp2)
+            {
+                arr[i]=tmp;
             }
         }
-        arr[1]=tmp;
+       
+   
 
         System.out.print(arr);
 
