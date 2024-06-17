@@ -13,8 +13,13 @@ public class Main {
         Scanner sc=new Scanner(System.in);
         int a=sc.nextInt();
         int b= sc.nextInt();
-
+        if(a<b){
         System.out.print(callMin(a,b)+" "+callMax(a,b));
+        }
+        else
+        {
+            System.out.print(callMax(a,b)+" "+callMin(a,b));
+        }
 
 
     }
