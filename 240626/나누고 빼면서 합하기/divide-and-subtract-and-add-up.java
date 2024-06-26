@@ -13,7 +13,7 @@ public class Main {
     }
 
     public static void div(int m){
-        System.out.println(m);
+   
         while(m>0){
     
             sum+=arr[m-1];
