@@ -13,7 +13,7 @@ public class Main {
 
             }
         }
-        return 0;
+        return -1;
     }
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
