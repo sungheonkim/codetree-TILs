@@ -6,11 +6,9 @@ public class Main {
     public static void plus(int n){
         arr=new int[n];
 
-        for(int i=0;i<n;i++)
-        {
-            arr[i]=n-i;
-        }
+        
     }
+   
 
     public static void div(int m){
    
@@ -35,6 +33,10 @@ public class Main {
         int n=sc.nextInt();
         int m=sc.nextInt();
         plus(n);
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
         div(m);
         System.out.print(sum);
     }
