@@ -5,11 +5,10 @@ public class Main {
     public static int[] arr;
 
     //생성시 input도 받기
-    public static void Input(int a){
+    public static void Input(int a,Scanner sc){
         arr=new int[a];
-        System.out.println(a);
-     
-
+   
+    
         for(int i=0;i<arr.length;i++){
             arr[i]=sc.nextInt();
         }
@@ -29,8 +28,8 @@ public class Main {
 
         int a=sc.nextInt();
         int b=sc.nextInt();
-        System.out.print(a+" "+b);
-        Input(a);// 배열 입력받기
+      
+        Input(a,sc);// 배열 입력받기
 
         for(int k=0;k<b;k++){
             int i=sc.nextInt();
