@@ -24,15 +24,26 @@ public class Main {
             list.get(tmp2).add(tmp);
 
         }
-        System.out.print(list);
-        dfs(v,list);
+        int cnt=0;
+        for(int i=1;i<=n;i++)
+        {
+        
+            if(!visited[i]){
+                cnt++;
+                dfs(i,list);
+            }
+            
+        }
+        System.out.println(cnt);
+
+        
     }
-    private void dfs(int v,List<List <Integer>> list){
+    public static void dfs(int v,List<List <Integer>> list){
         if(visited[v]){
             return;
         }
         visited[v]=true;
-        System.out.println(v+"방문함"+visited[v]);
+     
         List<Integer> tmp =list.get(v);
 
         for(int i=0;i<tmp.size();i++){
