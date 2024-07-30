@@ -42,6 +42,7 @@ public class Main {
         if(visited[v]){
             return;
         }
+        
         visited[v]=true;
      
         List<Integer> tmp =list.get(v);
