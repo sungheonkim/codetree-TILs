@@ -1,6 +1,7 @@
 import java.util.*;
 public class Main {
     static boolean[] visited;
+    static int cnt=0;
     public static void main(String[] args) {
         // 여기에 코드를 작성해주세요.
         Scanner sc=new Scanner(System.in);
@@ -24,17 +25,10 @@ public class Main {
             list.get(tmp2).add(tmp);
 
         }
-        int cnt=0;
-        for(int i=1;i<=n;i++)
-        {
-        
-            if(!visited[i]){
-                cnt++;
-                dfs(i,list);
-            }
-            
-        }
+      
+        dfs(1,list);
         System.out.println(cnt);
+     
 
         
     }
@@ -42,18 +36,17 @@ public class Main {
         if(visited[v]){
             return;
         }
-        
+
         visited[v]=true;
      
         List<Integer> tmp =list.get(v);
 
         for(int i=0;i<tmp.size();i++){
             if(!visited[tmp.get(i)]){
+                cnt++;
                 dfs(tmp.get(i),list);
             }
         }
         
-
-
     }
 }
