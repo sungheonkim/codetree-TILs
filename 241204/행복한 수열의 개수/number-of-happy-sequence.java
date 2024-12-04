@@ -24,33 +24,37 @@ public class Main {
         System.out.println(result);
     }
     //3.m개 연속 같은 수가 나오는지 판별
-    public static int isTrueRow(int m, int n, int start) {
-        int cnt = 1;  // 1부터 시작
-        for(int i = 0; i < n-1; i++) {
-            if(grid[start][i] == grid[start][i+1]) {
-                cnt++;
-                if(cnt >= m) {  // m개 이상 연속되면
-                    return 1;
-                }
-            } else {
-                cnt = 1;  // 다른 수가 나오면 1로 초기화
-            }
-        }
-        return 0;
-}
-    public static int isTrueCol(int m,int n,int start){
-        int cnt=1;
-        for(int i=0;i<n-1;i++){
-            //종료조건
-            if(cnt==m){
+   public static int isTrueRow(int m, int n, int start) {
+    if(m == 1) return 1;  // M이 1이면 무조건 1 반환
+    
+    int cnt = 1;
+    for(int i = 0; i < n-1; i++) {
+        if(grid[start][i] == grid[start][i+1]) {
+            cnt++;
+            if(cnt >= m) {
                 return 1;
             }
-            
-            if(grid[i][start]==grid[i+1][start]) cnt++;
-            else cnt=1;
+        } else {
+            cnt = 1;
         }
-
-        if(cnt==m) return 1;
-        else return 0;
     }
+    return 0;
+}
+
+public static int isTrueCol(int m, int n, int start) {
+    if(m == 1) return 1;  // M이 1이면 무조건 1 반환
+    
+    int cnt = 1;
+    for(int i = 0; i < n-1; i++) {
+        if(grid[i][start] == grid[i+1][start]) {
+            cnt++;
+            if(cnt >= m) {
+                return 1;
+            }
+        } else {
+            cnt = 1;
+        }
+    }
+    return 0;
+}
 }
