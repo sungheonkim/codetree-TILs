@@ -46,20 +46,3 @@ class Score implements Comparable<Score>{
 
 
 
-
-
-맞았습니다!
-
-입력
-
-
-
-3
-lee 50 60 70 
-kim 70 80 70
-    }
-    @Override
-    public int compareTo(Score score){
-        return(this.score1+this.score2+this.score3)-(score.score1+score.score2+score.score3);
-    }
-}
