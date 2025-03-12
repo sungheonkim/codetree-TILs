@@ -30,12 +30,13 @@ class Student implements Comparable<Student>{
     }
     @Override
     public int compareTo(Student student){
-        if(student.height==this.height){
-            if(student.weight==this.weight){
-                return student.number-this.number;
-            }
-            return student.weight-this.weight;
-        }
-        return student.height-this.height;
+        // 키가 크면 정렬 했을 때 앞에 와야 합니다.
+        if(this.height != student.height)
+            return student.height - this.height;
+        // 몸무게가 크면 정렬 했을 때 앞에 와야합니다.
+        if(this.weight != student.weight)
+            return student.weight - this.weight;
+        // 번호가 작으면 앞에 와야 합니다.
+        return this.number - student.number;
     }
 }
