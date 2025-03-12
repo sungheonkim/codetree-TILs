@@ -18,11 +18,10 @@ public class Main {
         for(int i=0;i<n;i++){
             answer[number[i].index]=i+1;
         }
-        for(int i=1.;i<=n;i++){
+        for(int i=1;i<=n;i++){
             System.out.print(answer[i] + " ");
         }
     
-
         
     }
 }
