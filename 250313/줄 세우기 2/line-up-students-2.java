@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -10,7 +10,7 @@ public class Main {
             int weight = sc.nextInt();
             person[i]=new Person(height,weight,i+1);
         }
-
+        Arrays.sort(person);
         for(int i=0;i<n;i++){
             System.out.printf("%d %d %d\n",person[i].height,person[i].weight,person[i].num);
         }
@@ -30,7 +30,7 @@ class Person implements Comparable<Person>{
     @Override
     public int compareTo(Person person){
         if(person.height!=this.height){
-            return person.height-this.height;
+            return this.height-person.height;
         }   
         return person.weight-this.weight;
     }
