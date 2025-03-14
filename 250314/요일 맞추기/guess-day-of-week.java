@@ -6,24 +6,28 @@ public class Main {
         int d1 = sc.nextInt();
         int m2 = sc.nextInt();
         int d2 = sc.nextInt();
+       
+        String[] result=new String[]{"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
+       
+        int diff=numOfDays(m2,d2)-numOfDays(m1,d1);
+
+        while(diff<0)
+            diff+=7;
+
+        System.out.print(result[diff % 7]);
+    }
+    public static int numOfDays(int m, int d) {
+        // 계산 편의를 위해 월마다 몇 일이 있는지를 적어줍니다. 
         int[] days = new int[]{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-
-        String[] result=new String[]{"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
-        int index=0; //시작이 월욜
-
-        while(true){
-            if(m1==m2&&d1==d2) break;
-            index=(index+1)%7; // 토->일 처리
-            d1++;
-            if(d1>days[m1]){
-                d1=1;
-                m1++;
-            }
-             if(m1 > 12) {
-                    m1 = 1;
-                }
-        }
-        System.out.println(result[index]);
-        // Please write your code here.
+        int totalDays = 0;
+        
+        // 1월부터 (m - 1)월 까지는 전부 꽉 채워져 있습니다.
+        for(int i = 1; i < m; i++)
+            totalDays += days[i];
+        
+        // m월의 경우에는 정확이 d일만 있습니다.
+        totalDays += d;
+        
+        return totalDays;
     }
 }
