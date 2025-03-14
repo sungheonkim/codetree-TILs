@@ -8,8 +8,6 @@ public class Main {
         int d2 = sc.nextInt();
         String A=sc.next();
        
-        String[] result=new String[]{"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
-       
         int diff=numOfDays(m2,d2)-numOfDays(m1,d1);
 
         while(diff<0)
