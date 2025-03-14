@@ -10,6 +10,12 @@ public class Main {
         int currB=11;
         int currC=11;
         int total=0;
+
+       
+        if((B<11)||(B==11&&C<11)){ 
+            System.out.println(-1);
+            return;
+        }
         while(true){
             if((A==currA)&&(B==currB)&&(C==currC)) break;
             total++;//시간증가
