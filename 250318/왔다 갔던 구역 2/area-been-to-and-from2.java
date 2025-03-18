@@ -20,7 +20,7 @@ public class Main {
         }
         int cnt=0;
         for(int i=0;i<OFFSET*2+1;i++){
-            if(visit[i]>1) cnt++;
+            if(visit[i]>=1) cnt++;
         }
         System.out.print(cnt);
     }
