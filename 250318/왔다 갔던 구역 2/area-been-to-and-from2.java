@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Main {
     public static int curr=0; // 현재 좌표
     public static int[] visit; // 구간 체크하는 용도
-    public static int OFFSET=100;
+    public static int OFFSET=1000;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -18,6 +18,8 @@ public class Main {
             if(dir=='L') left(x);
             // Please write your code here.
         }
+
+
         int cnt=0;
         for(int i=0;i<OFFSET*2+1;i++){
             if(visit[i]>=2) cnt++;
