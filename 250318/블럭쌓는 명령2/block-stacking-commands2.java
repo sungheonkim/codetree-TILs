@@ -12,16 +12,16 @@ public class Main {
             int A = sc.nextInt();
             int B = sc.nextInt();
             for(int j=A;j<B;j++){
-                visit[j-1]=1;
+                visit[j-1]++;
             }
         }
 
-        int cnt=0;
+        int max=0;
 
         for(int i=0;i<K;i++){
-            if(visit[i]==1) cnt++;
+            max=Math.max(max,visit[i]);
         }
-        System.out.println(cnt);
+        System.out.println(max+1);
         // Please write your code here.
     }
 }
