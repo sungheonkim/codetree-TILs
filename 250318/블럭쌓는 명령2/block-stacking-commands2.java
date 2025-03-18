@@ -5,23 +5,29 @@ public class Main {
         int N = sc.nextInt();
         int K = sc.nextInt();
 
-        //0으로 N개 만큼 블록생김
-        int[] visit= new int[N];
+        // N개의 블록을 0으로 초기화
+        int[] visit = new int[N];
 
+        // 색종이 정보 입력 받아 블록 덮기
         for (int i = 0; i < K; i++) {
             int A = sc.nextInt();
             int B = sc.nextInt();
-            for(int j=A;j<B;j++){
-                visit[j-1]++;
+            
+            // 배열 인덱스 보정 및 정확한 범위 설정
+            for(int j = A-1; j < B; j++){
+                visit[j]++;
             }
         }
 
-        int max=0;
-
-        for(int i=0;i<K;i++){
-            max=Math.max(max,visit[i]);
+        // 최대값 찾기 (전체 배열 순회)
+        int max = 0;
+        for(int i = 0; i < N; i++){
+            if(visit[i] > max){
+                max = visit[i];
+            }
         }
-        System.out.println(max+1);
-        // Please write your code here.
+
+        // 최대 겹침 횟수 출력
+        System.out.println(max);
     }
 }
