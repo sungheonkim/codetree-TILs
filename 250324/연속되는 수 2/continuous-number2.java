@@ -10,14 +10,15 @@ public class Main {
         }
 
         int max=0;
-        int cnt=1;
-        for(int i=1;i<n;i++){
-            if(arr[i]==arr[i-1]){
+        int cnt=0;
+        for(int i=0;i<n;i++){
+            if(i>=1&&arr[i]==arr[i-1]){ 
                 cnt++;
             }
             else{
                 cnt=1;
             }
+          
             max=Math.max(cnt,max);
         }
         System.out.println(max);
