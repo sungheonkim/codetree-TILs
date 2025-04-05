@@ -32,28 +32,22 @@ public class Main {
                 timeB++;
             }
         }
-        int minTime=Math.min(timeA,timeB);
-        //초기 선두 구해주기, 0이 A, 1이 B
-        boolean fast=true;
-        if(posA[1]>posB[1]) fast=false;
-        else fast=true;
-        
-        int cnt=0; //선두 바뀐 횟수
+        //선구 구해주기 
+        int leader=0,cnt=0;
 
-        for(int i=2;i<=minTime;i++){
-            if(fast==false){
-                if(posA[i]<posB[i]){
+        for(int i=1;i<timeA;i++){
+            if(posA[i]>posB[i]){
+                if(leader==2){
                     cnt++;
-                    fast=true;
                 }
+                leader=1;
             }
-            else{
-                if(posA[i]>posB[i]){
+            if(posA[i]<posB[i]){
+                if(leader==1){
                     cnt++;
-                    fast=false;
                 }
+                leader=2;
             }
-
         }
         System.out.println(cnt);
         // Please write your code here.
