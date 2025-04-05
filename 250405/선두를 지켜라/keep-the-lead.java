@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int maxTime=1000;
+    public static int maxTime=1000000;
     public static int[] posA=new int[maxTime+1];
     public static int[] posB=new int[maxTime+1];
 
