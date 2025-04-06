@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static int MAX_TIME=100000;
+    public static int MAX_TIME=1000000;
     public static int[] posA=new int[MAX_TIME+1];
     public static int[] posB=new int[MAX_TIME+1];
 
@@ -10,9 +10,7 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
         
-        // 초기 위치를 0으로 설정 (여기로 옮겨왔습니다)
-        posA[0]=0;
-        posB[0]=0;
+    
         
         int timeA=1;
         for (int i = 0; i < n; i++) {
