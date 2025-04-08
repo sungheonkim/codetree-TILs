@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main {
-    public static int MAXSIZE=100000;
+    public static int MAXSIZE=1000000;
     public static int[] posA=new int[MAXSIZE+1];
     public static int[] posB=new int[MAXSIZE+1];
     public static void main(String[] args) {
