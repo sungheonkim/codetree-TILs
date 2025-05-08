@@ -4,7 +4,7 @@ public class Main {
     //시계 방향으로 돌 수 있도록 해준다
     public static int[] dx= new int[]{1,0,-1,0};
     public static int[] dy= new int[]{0,-1,0,1};
-    public static int x,y=0;
+    public static int x=0,y=0;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
