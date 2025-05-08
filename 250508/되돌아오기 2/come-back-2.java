@@ -14,6 +14,7 @@ public class Main {
         //북쪽 방향 바라보고 시작
         int dir=3;
         int time=0;
+        boolean flag=false;
 
         for(int i=0;i<len;i++){
             char cDir=commands.charAt(i);
@@ -26,10 +27,14 @@ public class Main {
             }
             time++;
 
-            if(x==0&&y==0) break;
-
+            if(x==0&&y==0) {
+                System.out.println(time);
+                flag=true;
+                break;
+            }
         }
-        System.out.println(time);
+        if(!flag) System.out.println(-1);
+        
         // Please write your code here.
     }
 }
